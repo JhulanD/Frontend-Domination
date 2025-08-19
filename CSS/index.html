@@ -13,7 +13,7 @@
     <hr>
     <div id="width-height-in-css" class="chapter">
         <h2>Width and Height in CSS</h2>
-        <div class="perplexcity">
+        <div class="chapter-content">
             <pre>
             <p>Here are three common ways to target and style elements.</p>
 
@@ -83,6 +83,7 @@ Each method helps you control styling at different levels of specificity and reu
     <hr>
     <div id="color-in-css" class="chapter">
         <h2>Color in CSS</h2>
+        <div class="chapter-content"></div>
         <p>
             In CSS, color is used to set the color of text, backgrounds, borders, and other elements. Here are key
             points about the color property in CSS:
@@ -110,12 +111,13 @@ Each method helps you control styling at different levels of specificity and reu
     <hr>
     <div id="size-in-css" class="chapter">
         <h2>Size in CSS</h2>
+        <div class="chapter-content"></div>
         <p>
             In CSS, size usually refers to controlling the width and height of elements. Here’s a quick overview.
         </p>
         <h3>Common Value Types</h3>
         <p>
-            <strong>units:</strong>  px (pixels), em, rem, cm etc.
+            <strong>units:</strong> px (pixels), em, rem, cm etc.
             <br>
             Example: width: 500px;
         </p>
@@ -135,39 +137,678 @@ Each method helps you control styling at different levels of specificity and reu
 
             min-width and min-height: sets minimum size limits.
         </p>
-
-
     </div>
     <div id="min-max-width-in-css" class="chapter">
         <h2>Min-Max Width in CSS</h2>
         <div class="chapter-content">
-             <p>
-            In CSS, min-width and max-width are properties used to control the minimum and maximum width of an element. They are very helpful for making responsive designs.
-        </p>
-        <h3>min-width</h3>
-        <p>
-            Specifies the <strong>minimum width</strong> of an element.;
-        </p>
-        <p>
-            The element’s width will never be smaller than this value, even if its content or container is smaller.;
-        </p>
+            <p>
+                In CSS, min-width and max-width are properties used to control the minimum and maximum width of an
+                element. They are very helpful for making responsive designs.
+            </p>
+            <h3>min-width</h3>
+            <p>
+                Specifies the <strong>minimum width</strong> of an element.;
+            </p>
+            <p>
+                The element’s width will never be smaller than this value, even if its content or container is smaller.;
+            </p>
 
-        <p>
-            Useful for preventing elements from becoming too narrow.
-        </p>
+            <p>
+                Useful for preventing elements from becoming too narrow.
+            </p>
 
-        <p>
-            <strong>Additional Related Properties</strong>
-            max-width and max-height: sets maximum size limits.
+            <p>
+                <strong>Additional Related Properties</strong>
+                max-width and max-height: sets maximum size limits.
 
-            min-width and min-height: sets minimum size limits.
-        </p>
+                min-width and min-height: sets minimum size limits.
+            </p>
         </div>
-       
+
 
 
     </div>
+    <div id="display-in-css" class="chapter">
+        <h2>Display Properties in CSS</h2>
+        <div class="chapter-content">
+            <p>
+                The display property in CSS is fundamental for determining how HTML elements are rendered and interact
+                in the layout flow of a webpage. It controls whether elements act as blocks, inlines, containers, or are
+                hidden entirely. Here’s a concise overview:
+            </p>
+            <h3>What is the display Property?</h3>
+            <p>
+                The display property specifies the display behavior (the type of rendering box) of an element. Every
+                HTML element has a default display value, but you can override it using CSS to control layout and
+                structure.
+            </p>
 
+            <h3>Introduction</h3>
+            <p>The <code>display</code> property in CSS is one of the most essential concepts for shaping how elements
+                behave and interact within a web page layout. It dictates whether an element appears as a block, inline,
+                grid, flex container, or is even visible at all. Understanding the display property is the foundation of
+                building layouts in frontend development.</p>
+
+            <h3>Block Display</h2>
+                <p>When an element is given a <code>block</code> display type, it begins on a new line and stretches out
+                    as
+                    far as it can horizontally by default. Block-level elements allow you to specify width and height
+                    directly. Headings, paragraphs, and divs are common examples of default block elements. This layout
+                    is
+                    suited for major structural divisions within a site.</p>
+                <p><strong>Example:</strong> A navigation bar stretches fully across the page’s width and appears on its
+                    own
+                    line.</p>
+
+                <h3>Inline Display</h3>
+                <p>Elements with an <code>inline</code> display remain within the flow of surrounding text, only taking
+                    up
+                    as much space as their content requires. Unlike block elements, inline elements do not begin on a
+                    new
+                    line and you cannot set their width or height. Links, spans, and emphasized text are common examples
+                    of
+                    inline elements.</p>
+                <p><strong>Example:</strong> A piece of highlighted text appears within a paragraph without breaking the
+                    line.</p>
+
+                <h3>Inline-Block Display</h3>
+                <p>The <code>inline-block</code> display combines the characteristics of both inline and block elements.
+                    Like inline, the elements do not start on a new line, but like block, you can set their width and
+                    height. This is especially useful for things like buttons or smaller containers that need specific
+                    sizing but still flow inline with text or other elements.</p>
+                <p><strong>Example:</strong> Several buttons are aligned horizontally that have fixed widths and heights
+                    but
+                    remain on the same line.</p>
+
+                <h3>None (Hidden Elements)</h3>
+                <p>Setting an element’s display property to <code>none</code> completely removes it from the page — it
+                    will
+                    not be visible and will not occupy any space. This is often used for hiding menus or modals, or for
+                    implementing features that appear based on user interaction.</p>
+                <p><strong>Example:</strong> A hidden popup window or menu that is not visible and does not affect the
+                    surrounding layout.</p>
+
+                <h3>Flex (Flexible Layouts)</h3>
+                <p>The <code>flex</code> value turns an element into a flex container and its children into flexible
+                    items.
+                    Flex layouts provide a robust and simple way to create complex, responsive designs, such as
+                    horizontal
+                    navigation bars, or to center items both vertically and horizontally.</p>
+                <p><strong>Example:</strong> A horizontal menu bar where the menu items automatically space themselves
+                    evenly across the container.</p>
+
+                <h3>Grid (Grid Layouts)</h3>
+                <p>Setting an element’s display to <code>grid</code> creates a grid container for its children,
+                    unlocking
+                    two-dimensional layout capabilities. Grids allow the precise arrangement of elements in rows and
+                    columns
+                    and are widely used for dashboard layouts or image galleries.</p>
+                <p><strong>Example:</strong> A photo gallery where images are arranged in neat rows and columns with
+                    equal
+                    gaps between them.</p>
+
+                <h3>Contents</h3>
+                <p>With the <code>contents</code> display value, the container element itself becomes invisible in the
+                    layout flow, but its children remain as if the parent does not exist. This allows for cleaning up
+                    markup
+                    while retaining all child elements in the visual structure.</p>
+                <p><strong>Example:</strong> Removing a wrapping element from a list so its items behave as direct
+                    children
+                    of the outer container.</p>
+
+                <h3>List-Item</h3>
+                <p>Elements given the <code>list-item</code> value behave as if they are part of a list, showing bullets
+                    or
+                    numbers where appropriate. Although <code>&lt;li&gt;</code> elements are typically list items, any
+                    element given this display type will be treated similarly, which is useful for generating custom
+                    lists
+                    with non-typical tags.</p>
+                <p><strong>Example:</strong> Making individual blocks behave like items in a bulleted list, even if they
+                    are
+                    not inside a list container.</p>
+
+                <h3>Table, Table-Row, Table-Cell</h3>
+                <p>CSS allows non-table elements to behave like tables, rows, and cells. The <code>table</code> value
+                    causes
+                    an element to act like a table; <code>table-row</code> acts like a row within a table; and
+                    <code>table-cell</code> behaves like an individual cell. These are valuable for complex tabular data
+                    or
+                    custom layout structures without using actual HTML tables.
+                </p>
+                <p><strong>Example:</strong> Structuring content in rows and columns using div-like elements that behave
+                    exactly like a table with borders and alignment.</p>
+
+                <h3>Inline-Flex and Inline-Grid</h3>
+                <p><code>inline-flex</code> and <code>inline-grid</code> are similar to <code>flex</code> and
+                    <code>grid</code>, but these containers behave as inline elements, remaining in the flow of text.
+                    This
+                    can be necessary when creating advanced layouts that must integrate seamlessly with inline text or
+                    other
+                    inline elements.
+                </p>
+                <p><strong>Example:</strong> A group of icons aligned neatly next to a paragraph without forcing a line
+                    break.</p>
+
+                <h3>Run-in</h2>
+                    <p>The <code>run-in</code> value is rarely used, as its behavior depends on context. Sometimes
+                        elements
+                        display as blocks; other times as inline elements, based on their surrounding content.</p>
+                    <p><strong>Example:</strong> A heading that sometimes appears on the same line as the next block if
+                        space
+                        allows or starts on a new line otherwise.</p>
+
+                    <h3>Initial and Inherit</h3>
+                    <p><code>initial</code> resets the display to its default value for that HTML element.<br>
+                        <code>inherit</code> causes the element to take the display value of its parent.
+                    </p>
+                    <p><strong>Example:</strong> Resetting a customized button’s layout to behave like a normal button
+                        (default)
+                        or making an element match its container’s display style.</p>
+
+                    <h3>Summary</h3>
+                    <p>In modern web development, the <code>display</code> property serves as the cornerstone for
+                        structuring
+                        page content. It determines if elements form the skeleton of the page (block), blend into lines
+                        of text
+                        (inline), form advanced responsive layouts (flex, grid), or even disappear entirely
+                        (<code>none</code>).
+                        Mastering its values and usage equips designers and developers with immense control and
+                        flexibility when
+                        building for the web.</p>
+
+
+
+        </div>
+
+
+
+    </div>
+    <div id="css-flexbox" class="chapter">
+        <h2>Chapter: CSS Flexbox</h2>
+        <div class="chapter-content">
+            <h3>Introduction</h3>
+            <p>CSS Flexbox, or Flexible Box Layout, is a powerful layout module that allows you to design complex and
+                responsive layouts more efficiently. It provides a method for aligning and distributing space among
+                items in a container, even when their size is unknown or dynamic. Flexbox adapts the layout to different
+                screen sizes and display devices, making it essential for modern web design.</p>
+
+            <h3>Flex Container</h3>
+            <p>The flex container is the parent element where flexbox is applied by setting <code>display: flex;</code>
+                or <code>display: inline-flex;</code>. This container activates flexbox behavior on its child elements,
+                called flex items.</p>
+            <p><strong>Example:</strong></p>
+            <pre>
+&lt;div style="display: flex;"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Flex Items</h3>
+            <p>Flex items are the direct children of a flex container. They are laid out according to the rules of
+                flexbox, which can control their size, alignment, order, and spacing.</p>
+            <p><strong>Example:</strong> List items in a menu that are evenly spaced and can adjust size responsively.
+            </p>
+            <pre>
+&lt;nav style="display: flex; justify-content: space-around;"&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+</pre>
+
+            <h3>Flex Direction</h3>
+            <p>The <code>flex-direction</code> property controls the main axis direction along which flex items are laid
+                out.</p>
+            <ul>
+                <li><code>row</code>: Items are laid out horizontally from left to right (default).</li>
+                <li><code>row-reverse</code>: Items laid out horizontally but in reverse order.</li>
+                <li><code>column</code>: Items laid out vertically from top to bottom.</li>
+                <li><code>column-reverse</code>: Items laid out vertically but bottom to top.</li>
+            </ul>
+            <p><strong>Example:</strong> A sidebar menu using <code>flex-direction: column;</code> to stack items
+                vertically.</p>
+            <pre>
+&lt;div style="display: flex; flex-direction: column;"&gt;
+  &lt;button&gt;Dashboard&lt;/button&gt;
+  &lt;button&gt;Settings&lt;/button&gt;
+  &lt;button&gt;Profile&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Justify Content</h3>
+            <p>This property manages how flex items are aligned along the main axis.</p>
+            <ul>
+                <li><code>flex-start</code>: Items start from the beginning of the container.</li>
+                <li><code>flex-end</code>: Items align to the end.</li>
+                <li><code>center</code>: Items are centered.</li>
+                <li><code>space-between</code>: Items are evenly distributed with the first item at the start and last
+                    item at the end.</li>
+                <li><code>space-around</code>: Items have equal space around them.</li>
+            </ul>
+            <p><strong>Example:</strong> Navigation links distributed evenly across a horizontal bar using
+                <code>justify-content: space-between;</code>.
+            </p>
+            <pre>
+&lt;nav style="display: flex; justify-content: space-between;"&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;Services&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+</pre>
+
+            <h3>Align Items</h3>
+            <p>This controls alignment of flex items along the cross axis (perpendicular to the main axis).</p>
+            <ul>
+                <li><code>stretch</code> (default): Items stretch to fill the container.</li>
+                <li><code>flex-start</code>: Items aligned to the start of the cross axis.</li>
+                <li><code>flex-end</code>: Items aligned to the end of the cross axis.</li>
+                <li><code>center</code>: Items centered along the cross axis.</li>
+            </ul>
+            <p><strong>Example:</strong> Centering menu icons vertically inside a navigation bar.</p>
+            <pre>
+&lt;nav style="display: flex; align-items: center; height: 60px;"&gt;
+  &lt;div&gt;Logo&lt;/div&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;About&lt;/a&gt;
+&lt;/nav&gt;
+</pre>
+
+            <h3>Flex Wrap</h3>
+            <p>By default, flex items try to fit on one line. Use <code>flex-wrap</code> to allow items to wrap onto
+                multiple lines.</p>
+            <ul>
+                <li><code>nowrap</code>: No wrapping (default).</li>
+                <li><code>wrap</code>: Items wrap onto multiple lines.</li>
+                <li><code>wrap-reverse</code>: Items wrap but in reverse order.</li>
+            </ul>
+            <p><strong>Example:</strong> Product cards wrapping to new lines on smaller screens with
+                <code>flex-wrap: wrap;</code>.
+            </p>
+            <pre>
+&lt;div style="display: flex; flex-wrap: wrap;"&gt;
+  &lt;div style="width: 200px; margin: 10px;"&gt;Card 1&lt;/div&gt;
+  &lt;div style="width: 200px; margin: 10px;"&gt;Card 2&lt;/div&gt;
+  &lt;div style="width: 200px; margin: 10px;"&gt;Card 3&lt;/div&gt;
+  &lt;div style="width: 200px; margin: 10px;"&gt;Card 4&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Order</h3>
+            <p>The <code>order</code> property controls the order in which flex items appear, regardless of their source
+                order in HTML.</p>
+            <p><strong>Example:</strong> Moving a “Sign Up” button to appear last even if it appears first in the
+                markup.</p>
+            <pre>
+&lt;div style="display: flex;"&gt;
+  &lt;button style="order: 2;"&gt;Login&lt;/button&gt;
+  &lt;button style="order: 1;"&gt;Sign Up&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Flex Grow, Flex Shrink, Flex Basis</h3>
+            <ul>
+                <li><code>flex-grow</code>: Defines how much a flex item will grow relative to others.</li>
+                <li><code>flex-shrink</code>: Defines how much a flex item will shrink relative to others.</li>
+                <li><code>flex-basis</code>: Defines the initial size of a flex item before growing or shrinking.</li>
+            </ul>
+            <p><strong>Example:</strong> Allowing a search input box in a toolbar to grow and fill remaining space with
+                <code>flex-grow: 1;</code>.
+            </p>
+            <pre>
+&lt;div style="display: flex;"&gt;
+  &lt;input type="text" style="flex-grow: 1;" placeholder="Search..."&gt;
+  &lt;button&gt;Go&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Align Self</h3>
+            <p>This property overrides the container’s <code>align-items</code> for individual flex items.</p>
+            <p><strong>Example:</strong> Keeping one menu item aligned differently, like bottom aligned, in an otherwise
+                centered menu.</p>
+            <pre>
+&lt;nav style="display: flex; align-items: center; height: 60px;"&gt;
+  &lt;div&gt;Logo&lt;/div&gt;
+  &lt;a href="#" style="align-self: flex-end;"&gt;Special Link&lt;/a&gt;
+&lt;/nav&gt;
+</pre>
+
+            <h3>Summary</h3>
+            <p>CSS Flexbox revolutionized layout design by offering flexible, dynamic, and responsive control over
+                alignment, sizing, space distribution, and order of elements within a container. It's a cornerstone
+                technique for modern web layouts and allows developers to build adaptable designs with less code and
+                complexity.</p>
+
+        </div>
+
+
+
+    </div>
+    <div id="css-grid" class="chapter">
+        <h2>Chapter: CSS Grid</h2>
+        <div class="chapter-content">
+            <h3>Introduction</h3>
+            <p>CSS Grid Layout is a powerful two-dimensional system that allows web developers to create complex and
+                responsive grid-based layouts easily. Unlike Flexbox, which is primarily one-dimensional (either row or
+                column), CSS Grid handles both rows and columns simultaneously, providing precise control over
+                placement,
+                sizing, and alignment of content in a grid format.</p>
+
+            <h3>Grid Container</h3>
+            <p>The grid container is the parent element on which you apply <code>display: grid;</code> or
+                <code>display: inline-grid;</code> to enable grid layout for its children.
+            </p>
+            <p><strong>Example:</strong></p>
+            <pre>
+&lt;div style="display: grid; grid-template-columns: 100px 200px 100px;"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Grid Template Columns and Rows</h3>
+            <p>These properties define the number and size of columns and rows.</p>
+            <ul>
+                <li><code>grid-template-columns</code>: Defines the width of each column.</li>
+                <li><code>grid-template-rows</code>: Defines the height of each row.</li>
+            </ul>
+            <p><strong>Example:</strong> Creating a grid with three columns and two rows:</p>
+            <pre>
+&lt;div style="
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 100px 200px;
+"&gt;
+  &lt;div&gt;Item 1&lt;/div&gt;
+  &lt;div&gt;Item 2&lt;/div&gt;
+  &lt;div&gt;Item 3&lt;/div&gt;
+  &lt;div&gt;Item 4&lt;/div&gt;
+  &lt;div&gt;Item 5&lt;/div&gt;
+  &lt;div&gt;Item 6&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+            <h3>Grid Gap</h3>
+            <p>The <code>gap</code> property (or <code>grid-gap</code>) adds spacing between grid tracks, both rows and
+                columns.</p>
+            <p><strong>Example:</strong> Adding a 15px gap between grid items:</p>
+            <pre>
+&lt;div style="
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+"&gt;
+  ... grid items ...
+&lt;/div&gt;
+</pre>
+
+            <h3>Grid Item Placement</h3>
+            <p>Grid items can be placed precisely using line numbers or named grid areas.</p>
+            <ul>
+                <li><code>grid-column-start</code> and <code>grid-column-end</code>: Controls the starting and ending
+                    column
+                    lines for an item.</li>
+                <li><code>grid-row-start</code> and <code>grid-row-end</code>: Controls the starting and ending row
+                    lines.
+                </li>
+            </ul>
+            <p><strong>Example:</strong> An item spanning from column 1 to 3 and rows 1 to 2:</p>
+            <pre>
+&lt;div style="
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+"&gt;Spanning item&lt;/div&gt;
+</pre>
+
+            <h3>Auto Placement</h3>
+            <p>If you don’t specify grid lines for items, the grid automatically places them row-wise or column-wise
+                depending on the configuration.</p>
+
+            <h3>Responsive Grids</h3>
+            <p>Using fractional units (<code>fr</code>), <code>minmax()</code>, and auto-fill features makes grids
+                flexible
+                and responsive.</p>
+            <p><strong>Example:</strong> A responsive grid with columns that shrink but don’t get smaller than 150px:
+            </p>
+            <pre>
+&lt;div style="
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+"&gt;
+  ... grid items ...
+&lt;/div&gt;
+</pre>
+
+            <h3>Summary</h3>
+            <p>CSS Grid Layout offers developers precise and powerful tools to create two-dimensional layouts on the
+                web.
+                With easy control over rows, columns, gaps, and item placement, Grid complements other CSS layout
+                methods
+                are essential for building responsive, visually rich web designs.</p>
+        </div>
+    </div>
+    <div id="pseudo-elements" class="chapter">
+        <h2>Chapter: CSS Pseudo-elements</h2>
+        <div class="chapter-content">
+            <h3>Introduction</h3>
+            <p>CSS pseudo-elements allow you to style specific parts of an element’s content without needing to add
+                extra
+                HTML markup. They are useful for adding decorative content, styling the first letter or line of text,
+                inserting content before or after an element, and more. Pseudo-elements are powerful tools for enhancing
+                design and UX while keeping HTML clean.</p>
+
+            <h3>Common Pseudo-elements</h3>
+            <ul>
+                <li><code>::before</code> - Inserts content before an element’s actual content.</li>
+                <li><code>::after</code> - Inserts content after an element’s actual content.</li>
+                <li><code>::first-letter</code> - Styles the first letter of an element.</li>
+                <li><code>::first-line</code> - Styles the first line of an element.</li>
+                <li><code>::selection</code> - Styles the portion of an element that’s selected by the user.</li>
+            </ul>
+
+            <h3>How to Use</h3>
+            <p>Pseudo-elements are written with two colons <code>::</code> followed by the pseudo-element name after a
+                selector.</p>
+
+            <h3>Examples</h3>
+
+            <p><strong>::before and ::after</strong>:</p>
+            <pre>
+p::before {
+  content: "Note: ";
+  font-weight: bold;
+  color: red;
+}
+
+p::after {
+  content: " ✔";
+  color: green;
+}
+</pre>
+            <p>This inserts the word “Note:” before every paragraph and a checkmark after it.</p>
+
+            <p><strong>::first-letter</strong>:</p>
+            <pre>
+p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: blue;
+}
+</pre>
+            <p>This styles the very first letter of every paragraph to stand out.</p>
+
+            <p><strong>::first-line</strong>:</p>
+            <pre>
+p::first-line {
+  font-variant: small-caps;
+  color: gray;
+}
+</pre>
+            <p>This styles the first line of each paragraph.</p>
+
+            <p><strong>::selection</strong>:</p>
+            <pre>
+::selection {
+  background-color: yellow;
+  color: black;
+}
+</pre>
+            <p>This changes the background and text color of any text the user selects on the page.</p>
+
+            <h3>Notes</h3>
+            <ul>
+                <li>Pseudo-elements do not create real DOM nodes—they are purely visual effects applied by CSS.</li>
+                <li>Always use double colon syntax <code>::</code> for CSS3 pseudo-elements. Single colon <code>:</code>
+                    is
+                    still supported for backward compatibility with CSS2.</li>
+            </ul>
+
+            <h3>Summary</h3>
+            <p>Pseudo-elements extend the power of CSS by letting you style specific parts of an element’s content in
+                creative ways without extra HTML. They are key for advanced design effects, user interaction feedback,
+                and
+                cleaner code structure.</p>
+        </div>
+    </div>
+    <div id="pseudo-classes" class="chapter">
+        <h2>Chapter: CSS Pseudo-classes</h2>
+
+        <h3>Introduction</h3>
+        <p>CSS pseudo-classes allow you to define a special state of an element without adding classes or IDs in the
+            HTML. They enable styling based on user interaction (like hovering or focusing), element position, form
+            state, or structural conditions within the DOM. Pseudo-classes enhance user experience and enable dynamic
+            styling purely with CSS.</p>
+
+        <h3>Common Pseudo-classes</h3>
+        <ul>
+            <li><code>:hover</code> — Styles an element when the user hovers over it with a mouse.</li>
+            <li><code>:focus</code> — Styles an element that has keyboard or mouse focus.</li>
+            <li><code>:active</code> — Styles an element at the moment it is being activated (e.g., clicking a button).
+            </li>
+            <li><code>:visited</code> — Styles links that the user has already visited.</li>
+            <li><code>:first-child</code> — Styles an element that is the first child of its parent.</li>
+            <li><code>:last-child</code> — Styles an element that is the last child of its parent.</li>
+            <li><code>:nth-child(n)</code> — Styles elements based on their position among siblings.</li>
+            <li><code>:not(selector)</code> — Styles elements that do NOT match the selector.</li>
+            <li><code>:checked</code> — Styles checked checkboxes or radio buttons.</li>
+        </ul>
+
+        <h3>How to Use</h3>
+        <p>Pseudo-classes are appended to a selector with a single colon <code>:</code> followed by the pseudo-class
+            name.</p>
+
+        <h3>Examples</h3>
+
+        <p><strong>:hover</strong> - Change button background on mouse hover:</p>
+        <pre>
+button:hover {
+  background-color: #007BFF;
+  color: white;
+}
+    </pre>
+        <p>Explore more button hover effects: <a href="https://www.proglobalbusinesssolutions.com/css-hover-effects/"
+                target="_blank" rel="noopener noreferrer">Top CSS Hover Effects</a></p>
+
+        <p><strong>:focus</strong> - Outline an input field when focused:</p>
+        <pre>
+input:focus {
+  border-color: #00BFFF;
+  box-shadow: 0 0 5px #00BFFF;
+}
+    </pre>
+
+        <p><strong>:nth-child(n)</strong> - Style every even list item:</p>
+        <pre>
+li:nth-child(even) {
+  background-color: #f0f0f0;
+}
+    </pre>
+
+        <p><strong>:not(selector)</strong> - Style all buttons except those with class 'disabled':</p>
+        <pre>
+button:not(.disabled) {
+  cursor: pointer;
+}
+    </pre>
+
+        <p><strong>:checked</strong> - Style checked checkboxes:</p>
+        <pre>
+input[type="checkbox"]:checked {
+  accent-color: green;
+}
+    </pre>
+
+        <h3>Real-Life Hover Effect Examples</h3>
+
+        <p><strong>Image Zoom on Hover</strong> - Images scale up slightly when hovered to draw attention:</p>
+        <pre>
+.image-container img {
+  transition: transform 0.3s ease;
+}
+.image-container:hover img {
+  transform: scale(1.1);
+}
+    </pre>
+        <p>See beautiful image hover demos: <a href="https://wpdatatables.com/css-image-hover-effects/" target="_blank"
+                rel="noopener noreferrer">CSS Image Hover Effects Examples</a></p>
+
+        <p><strong>Overlay Color on Image Hover</strong> - A semi-transparent colored overlay fades in on image hover:
+        </p>
+        <pre>
+.image-container {
+  position: relative;
+}
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 182, 193, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.image-container:hover::after {
+  opacity: 1;
+}
+    </pre>
+        <p>Explore more creative overlays: <a href="https://wpdean.com/css-hover-effects/" target="_blank"
+                rel="noopener noreferrer">CSS Hover Effects Gallery</a></p>
+
+        <p><strong>Animated Button Border on Hover</strong></p>
+        <pre>
+.button {
+  transition: border 0.3s ease;
+  border: 2px solid transparent;
+}
+.button:hover {
+  border: 2px solid orange;
+}
+    </pre>
+        <p>Discover advanced button animations: <a href="https://www.sliderrevolution.com/resources/css-hover-effects/"
+                target="_blank" rel="noopener noreferrer">Amazing CSS Hover Effects</a></p>
+
+        <h3>Notes</h3>
+        <ul>
+            <li>Pseudo-classes are dynamic and respond to user actions like hovering or focusing.</li>
+            <li>They help avoid extra JavaScript for simple UI interactions.</li>
+            <li>Combine multiple pseudo-classes for more advanced selectors, e.g., <code>a:hover:visited</code>.</li>
+        </ul>
+
+        <h3>Summary</h3>
+        <p>Pseudo-classes provide a flexible way to style elements based on their state, position, or user interaction,
+            enhancing interactivity and visual feedback in web designs without modifying the HTML structure.</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank"
+            rel="noopener noreferrer">
+            <p class="button">
+                MDN web docs: Top CSS Hover Effects
+            </p>
+        </a>
+    </div>
+
+    </div>
 </body>
 
 </html>
