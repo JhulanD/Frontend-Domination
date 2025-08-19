@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics - Understanding Core Concepts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Learning CSS Basics</h1>
+    <hr>
+    <div id="width-height-in-css" class="chapter">
+        <h2>Width and Height in CSS</h2>
+        <div class="perplexcity">
+            <pre>
+            <p>Here are three common ways to target and style elements.</p>
+
+1. **ID Selector (`#`)**  
+Targets a single element with a unique ID. Use `#idName` in CSS to style the element with `id="idName"`.  
+Example:  
+```css
+#header {
+  background-color: blue;
+}
+```
+```html
+This is the header
+```
+
+2. **Class Selector (`.`)**  
+Targets one or more elements with a shared class. Use `.className` in CSS to style elements with `class="className"`.  
+Example:  
+```css
+.highlight {
+  color: red;
+}
+```
+```html
+This text is red.
+This text is also red.
+```
+
+3. **Element Selector (`div`)**  
+Targets all elements of a specific type. Use the element name directly to style all such elements.  
+Example:  
+```css
+div {
+  padding: 10px;
+  border: 1px solid black;
+}
+```
+```html
+All div elements get padding and border.
+Another div.
+```
+
+***
+
+### Summary:
+
+| Selector       | Syntax   | Targets                          | Example         |
+|----------------|----------|---------------------------------|-----------------|
+| ID selector    | `#id`    | Single element by unique ID      | `#header`       |
+| Class selector | `.class` | One or many elements by class    | `.highlight`    |
+| Element selector | `element` | All elements of that type (e.g., `div`, `p`) | `div`          |
+
+Each method helps you control styling at different levels of specificity and reusability.
+
+[1] https://www.uxpin.com/studio/blog/html-vs-css/
+[2] https://www.geeksforgeeks.org/css/difference-between-html-and-css/
+[3] https://zerotomastery.io/blog/css-vs-html-comparison-guide/
+[4] https://www.w3schools.com/html/html_css.asp
+[5] https://www.w3schools.com/css/css_selectors.asp
+[6] https://www.w3schools.com/html/html5_syntax.asp
+[7] https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content
+[8] https://forum.freecodecamp.org/t/what-is-the-difference/490866
+[9] https://stackoverflow.com/questions/3142710/whats-the-difference-between-inline-styles-vs-classes
+        </pre>
+        </div>
+    </div>
+    <hr>
+    <div id="color-in-css" class="chapter">
+        <h2>Color in CSS</h2>
+        <p>
+            In CSS, color is used to set the color of text, backgrounds, borders, and other elements. Here are key
+            points about the color property in CSS:
+        </p>
+        <br>
+        <pre>
+            <style>
+  body {
+    color: #333333;
+  }
+  .highlight {
+    color: red;
+  }
+  .transparent {
+    color: rgba(0, 0, 255, 0.5);
+  }
+</style>
+
+<p>This is default text color.</p>
+<p class="highlight">This is red text.</p>
+<p class="transparent">This text is semi-transparent blue.</p>
+
+        </pre>
+    </div>
+    <hr>
+    <div id="size-in-css" class="chapter">
+        <h2>Size in CSS</h2>
+        <p>
+            In CSS, size usually refers to controlling the width and height of elements. Here’s a quick overview.
+        </p>
+        <h3>Common Value Types</h3>
+        <p>
+            <strong>units:</strong>  px (pixels), em, rem, cm etc.
+            <br>
+            Example: width: 500px;
+        </p>
+        <p>
+            <strong>Percentage:</strong> relative to the size of the containing element.
+            <br>
+            Example: width: 50%;
+        </p>
+
+        <p>
+            <strong>auto:</strong> lets the browser calculate the size (default).
+        </p>
+
+        <p>
+            <strong>Additional Related Properties</strong>
+            max-width and max-height: sets maximum size limits.
+
+            min-width and min-height: sets minimum size limits.
+        </p>
+
+
+    </div>
+    <div id="min-max-width-in-css" class="chapter">
+        <h2>Min-Max Width in CSS</h2>
+        <div class="chapter-content">
+             <p>
+            In CSS, min-width and max-width are properties used to control the minimum and maximum width of an element. They are very helpful for making responsive designs.
+        </p>
+        <h3>min-width</h3>
+        <p>
+            Specifies the <strong>minimum width</strong> of an element.;
+        </p>
+        <p>
+            The element’s width will never be smaller than this value, even if its content or container is smaller.;
+        </p>
+
+        <p>
+            Useful for preventing elements from becoming too narrow.
+        </p>
+
+        <p>
+            <strong>Additional Related Properties</strong>
+            max-width and max-height: sets maximum size limits.
+
+            min-width and min-height: sets minimum size limits.
+        </p>
+        </div>
+       
+
+
+    </div>
+
+</body>
+
+</html>
