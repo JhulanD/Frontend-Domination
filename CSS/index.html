@@ -9,6 +9,55 @@
 </head>
 
 <body>
+    <header>
+        <div id="nav">
+            <h2>codeblox.</h2>
+            <h4 class="navigation">
+                <a href="https://www.linkedin.com/in/jhulandey" target="_blank" rel="noopener noreferrer">About</a>
+            </h4>
+            <h4 class="navigation"><a href="https://jd-portfolio-demo.netlify.app" target="_blank" rel="noopener noreferrer">Portfolio</a></h4>
+            <h4 class="navigation"><a href="https://github.com/JhulanD" target="_blank" rel="noopener noreferrer">Github</a></h4>
+            <h4 class="navigation"><a href="mailto:jhulandey@hotmail.com" target="_blank" rel="noopener noreferrer">Contact</a></h4>
+        </div>
+        <lesson>
+  <div class="html-lesson">
+    <h2>Little HTML - Very Important: Understanding Anchor Tag Attributes</h2>
+    <div>
+      <h3>Anchor Element</h3>
+      <p>The <code>&lt;a&gt;</code> tag creates a hyperlink to another webpage or resource.</p>
+    </div>
+    <div>
+      <h3>Attributes Explained</h3>
+      <p>
+        <b>href</b>: Specifies the URL of the destination page.<br/>
+        <b>target="_blank"</b>: Opens the link in a new browser tab or window.<br/>
+        <b>rel="noopener noreferrer"</b>: Enhances security and privacy by:<br/>
+        &nbsp;&nbsp;- Preventing the new page from accessing the original page via JavaScript.<br/>
+        &nbsp;&nbsp;- Avoiding sending the referrer URL to the new site.
+      </p>
+    </div>
+    <div>
+      <h3>Best Practices</h3>
+      <p>Always use <code>rel="noopener noreferrer"</code> when using <code>target="_blank"</code> to protect your site and users.</p>
+    </div>
+  </div>
+</lesson>
+
+        <div id="navbar">
+            <h2>Now CSS! - Understanding Core Concepts</h2>
+            <nav>
+                <ul>
+                    <li><a href="#width-height-in-css">Width and Height in CSS</a></li>
+                    <li><a href="#color-in-css">Color in CSS</a></li>
+                    <li><a href="#size-in-css">Size in CSS</a></li>
+                    <li><a href="#min-max-width-in-css">Min-Max Width in CSS</a></li>
+                    <li><a href="#display-in-css">Display Properties in CSS</a></li>
+                    <li><a href="#position-in-css">Positioning in CSS</a></li>
+                    <li><a href="#pseudo-classes">Pseudo-Classes in CSS</a></li>
+                    <li><a href="#pseudo-elements">Pseudo-Elements in CSS</a></li>
+                </ul>
+        </div>
+    </header>
     <h1>Learning CSS Basics</h1>
     <hr>
     <div id="width-height-in-css" class="chapter">
@@ -807,8 +856,63 @@ input[type="checkbox"]:checked {
             </p>
         </a>
     </div>
-
+    <div class="main">
+        <div class="elem" id="elem1"></div>
+        <div class="elem" id="elem2"></div>
+        <div class="elem" id="elem3"></div>
+        <div class="elem" id="elem4"></div>
+        <!-- <div class="elem" id="elem5"></div> -->
     </div>
+  <div id="css-grid" class="chapter">
+    <h2>CSS Grid</h2>
+    
+    <div class="chapter-content">
+      <h3>Introduction</h3>
+      <p>
+        CSS Grid is a powerful two-dimensional layout system for the web. It helps arrange content into rows and columns, greatly simplifying complex layouts and making them responsive.
+      </p>
+    </div>
+    <div>
+      <h3>Grid Container &amp; Items</h3>
+      <p>
+        The grid container is the parent with <code>display: grid</code> or <code>display: inline-grid</code>. All direct children become grid items and can be placed into rows and columns automatically or via defined areas.
+      </p>
+    </div>
+    <div>
+      <h3>Essential Properties</h3>
+      <p>
+        The most important properties include: <b>grid-template-columns</b>, <b>grid-template-rows</b>, <b>gap</b>, <b>grid-column</b>, and <b>grid-row</b>. These controls define the grid’s structure and where items appear.
+      </p>
+    </div>
+    <div>
+      <h3>Basic Example</h3>
+      <p>
+        <code>
+          .container {<br/>
+            display: grid;<br/>
+            grid-template-columns: 200px 200px 200px;<br/>
+            grid-template-rows: 100px 100px;<br/>
+            gap: 10px;<br/>
+          }<br/>
+          &lt;div class="container"&gt;<br/>
+          &nbsp;&nbsp;&lt;div&gt;1&lt;/div&gt;<br/>
+          &nbsp;&nbsp;&lt;div&gt;2&lt;/div&gt;<br/>
+          &nbsp;&nbsp;&lt;div&gt;3&lt;/div&gt;<br/>
+          &nbsp;&nbsp;&lt;div&gt;4&lt;/div&gt;<br/>
+          &nbsp;&nbsp;&lt;div&gt;5&lt;/div&gt;<br/>
+          &nbsp;&nbsp;&lt;div&gt;6&lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+        </code>
+      </p>
+    </div>
+    <div>
+      <h3>When to Use Grid vs Flexbox</h3>
+      <p>
+        Use Grid when you need to control both rows and columns (2D layouts). Use Flexbox for simple layouts in a single dimension (rows <i>or</i> columns).
+      </p>
+    </div>
+  </div>
+
 </body>
 
 </html>
