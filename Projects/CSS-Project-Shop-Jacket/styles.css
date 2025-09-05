@@ -1,0 +1,170 @@
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* Define variables for easy customization */
+:root {
+    --font-primary: 'Tasa Explorer', sans-serif;
+    --font-secondary: 'Vend Sans', sans-serif;
+    --color-light: whitesmoke;
+    --color-dark: #202020;
+}
+
+/* Reset styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Global font setup */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: var(--font-primary);
+}
+
+/* Header spacing */
+header {
+    padding: 0 120px;
+}
+
+/* General page padding */
+main {
+    padding: 60px 120px;
+}
+
+/* Navigation bar styles */
+nav {
+    height: 100px;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;                  /* flexbox for layout */
+    justify-content: flex-end;      /* push links to the right */
+    align-items: center;            /* vertically center items */
+    gap: 20px;                      /* spacing between links */
+    padding: 0 40px;
+    font-size: 1.25rem;
+    text-transform: uppercase;      /* make nav text uppercase */
+    font-weight: 600;
+}
+
+nav h4 {
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+/* Style the cart icon */
+nav i {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+    border-radius: 50%;   /* round background */
+    padding: 10px;
+}
+
+/* Page wrapper */
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-light);
+}
+
+/* Hero section title */
+.hero h1 {
+    max-width: 600px;               /* restrict width for readability */
+    color: var(--color-dark);
+    font-size: 4rem;
+    line-height: 1.1;
+    letter-spacing: -2px;           /* tighter text look */
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* Sub-menu container */
+.sub-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Make both text and menu columns take equal width */
+.sub-menu > * {
+    flex: 1;
+}
+
+/* Right-side menu list */
+.sub-menu .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;                      /* spacing between items */
+    width: 300px;
+    padding: 30px;
+    font-size: 1rem;
+    color: var(--color-dark);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* -------------------------
+   MENU ITEMS STYLING
+   ------------------------- */
+.sub-menu .menu-items {
+    position: relative;             /* needed for hover ::before */
+    display: flex;
+    justify-content: space-between; /* space text + icon */
+    align-items: center;            /* vertical center */
+    gap: 10px;
+    width: 250px;
+    border-top: 2px solid var(--color-dark);
+    padding: 10px 5px;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;               /* hides hover background overflow */
+    z-index: 1;                     /* stack above ::before background */
+}
+
+/* Hover background effect */
+.sub-menu .menu-items::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-dark);
+    transform: translateY(100%);    /* start hidden below */
+    transition: transform 0.4s ease;/* smooth slide-up */
+    z-index: -1;                    /* put behind text/icon */
+}
+
+/* When hovered → background slides up */
+.sub-menu .menu-items:hover::before {
+    transform: translateY(0);
+}
+
+/* Text color change on hover */
+.sub-menu .menu-items:hover {
+    color: var(--color-light);
+}
+
+/* Icon styling inside menu items */
+.sub-menu .menu-items i {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+    transition: color 0.3s ease;    /* smooth color change */
+    z-index: 1;                     /* ensure icon stays visible above bg */
+}
+
+/* Icon color flips to light on hover */
+.sub-menu .menu-items:hover i {
+    color: var(--color-light);
+}
+
+/* Hero image background */
+.hero-img {
+    width: 100%;
+    height: 400px;
+    background-image: url(https://images.pexels.com/photos/30985150/pexels-photo-30985150.jpeg);
+    background-size: cover;         /* scale to cover container */
+    background-position: bottom center;
+}
