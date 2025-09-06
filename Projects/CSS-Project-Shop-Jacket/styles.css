@@ -30,19 +30,19 @@ header {
 
 /* General page padding */
 main {
-    padding: 60px 120px;
+    padding: 20px 120px;
 }
 
 /* Navigation bar styles */
 nav {
     height: 100px;
     width: 100%;
-    background-color: lightgray;
+    /* background-color:beige; */
     display: flex;                  /* flexbox for layout */
     justify-content: flex-end;      /* push links to the right */
     align-items: center;            /* vertically center items */
     gap: 20px;                      /* spacing between links */
-    padding: 0 40px;
+    /* padding: 0 40px; */
     font-size: 1.25rem;
     text-transform: uppercase;      /* make nav text uppercase */
     font-weight: 600;
@@ -55,7 +55,7 @@ nav h4 {
 
 /* Style the cart icon */
 nav i {
-    color: var(--color-light);
+    color: var(--color-light) !important;
     background-color: var(--color-dark);
     border-radius: 50%;   /* round background */
     padding: 10px;
@@ -68,11 +68,19 @@ nav i {
     background-color: var(--color-light);
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    /* background-color: azure; */
+}
+
 /* Hero section title */
 .hero h1 {
     max-width: 600px;               /* restrict width for readability */
     color: var(--color-dark);
-    font-size: 4rem;
+    font-size: 4.2vw;
     line-height: 1.1;
     letter-spacing: -2px;           /* tighter text look */
     font-weight: 400;
@@ -84,6 +92,7 @@ nav i {
 .sub-menu {
     display: flex;
     justify-content: space-between;
+    /* background-color:beige; */
 }
 
 /* Make both text and menu columns take equal width */
@@ -98,7 +107,7 @@ nav i {
     align-items: end;
     gap: 20px;                      /* spacing between items */
     width: 300px;
-    padding: 30px;
+    /* padding: 30px; */
     font-size: 1rem;
     color: var(--color-dark);
     font-weight: 400;
@@ -160,11 +169,139 @@ nav i {
     color: var(--color-light);
 }
 
+
 /* Hero image background */
 .hero-img {
     width: 100%;
     height: 400px;
     background-image: url(https://images.pexels.com/photos/30985150/pexels-photo-30985150.jpeg);
     background-size: cover;         /* scale to cover container */
-    background-position: bottom center;
+    background-position: 0 70%;
+}
+
+
+/* =======================================
+   RESPONSIVE STYLES WITH LEARNING NOTES
+   ======================================= */
+
+/* ----------- Tablets and smaller (<= 1024px) ----------- */
+@media screen and (max-width: 1024px) {
+    header {
+        padding: 0 60px; 
+        /* Reduce left/right padding → prevents header from feeling too wide on smaller screens */
+    }
+
+    main {
+        padding: 20px 60px;
+        /* Keep main padding balanced with header padding */
+    }
+
+    .hero h1 {
+        font-size: 5vw;
+        /* Scale text size with viewport width (vw) → auto adjusts on different screens */
+        max-width: 500px;
+        /* Slightly narrower line length → improves readability */
+    }
+
+    .sub-menu {
+        flex-direction: column;
+        /* Stack text + menu vertically (instead of side-by-side) → better for narrow widths */
+        gap: 30px;
+        /* Add breathing room between text and menu */
+    }
+
+    .sub-menu .menu {
+        align-items: flex-start;
+        /* Left-align menu items (looks natural on small screens vs right alignment) */
+        width: 100%;
+        /* Stretch full width to use available space */
+    }
+
+    .sub-menu .menu-items {
+        width: 100%;
+        /* Each menu button stretches full width → easier to tap on tablets */
+    }
+}
+
+/* ----------- Mobile landscape and below (<= 768px) ----------- */
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+        /* Spread nav items evenly across width → avoids cramping */
+        padding: 0 20px;
+        /* Reduce padding even more to save space */
+    }
+
+    nav h4 {
+        font-size: 1rem;
+        /* Shrink nav text slightly for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 6vw;
+        /* Larger relative text (6% of viewport width) → still readable on small screens */
+        max-width: 100%;
+        /* Allow headline to span full width instead of limiting to 600px */
+    }
+
+    .hero-img {
+        height: 250px;
+        /* Reduce hero image height so it doesn’t push content too far down */
+    }
+
+    .sub-menu {
+        gap: 20px;
+        /* Slightly smaller spacing between text and menu for compact layout */
+    }
+
+    .sub-menu .menu-items {
+        font-size: 0.9rem;
+        /* Slightly smaller font size */
+        padding: 12px;
+        /* Increase padding area → improves tap-ability */
+    }
+
+    .sub-menu .menu-items i {
+        font-size: 1.2rem;
+        /* Icons scale down slightly so they don’t overpower text */
+    }
+}
+
+/* ----------- Very small devices (<= 480px) ----------- */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0 15px;
+        /* Minimal padding → fits tiny screens like phones */
+    }
+
+    nav {
+        font-size: 0.9rem;
+        /* Slightly smaller nav text */
+        gap: 10px;
+        /* Tighten space between nav links */
+    }
+
+    .hero h1 {
+        font-size: 7vw;
+        /* Headline scales larger relative to viewport → keeps it readable */
+        line-height: 1.2;
+        /* Add breathing room between lines so text doesn’t look cramped */
+    }
+
+    .sub-menu .menu {
+        gap: 15px;
+        /* Slightly reduce spacing between menu buttons */
+    }
+
+    .sub-menu .menu-items {
+        font-size: 0.85rem;
+        /* Text becomes compact */
+        padding: 10px;
+        /* Enough padding for finger taps without wasting space */
+    }
+
+    .hero-img {
+        height: 180px;
+        /* Much smaller hero image → avoids scrolling too much before content */
+    }
 }
